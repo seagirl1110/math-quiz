@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Answer from '../answer';
+import styles from './styles.module.css';
 
 function MathQuiz() {
   const [count, setCount] = useState(0);
@@ -12,9 +13,9 @@ function MathQuiz() {
   }
 
   return (
-    <div>
-      <div>Ваши очки: {count}</div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.text}>Ваши очки: {count}</div>
+      <div className={styles.text}>
         {a} + {b} = ?
       </div>
       <Answer num1={a} num2={b} updatePoints={updatePoints} />

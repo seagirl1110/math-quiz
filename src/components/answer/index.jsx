@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './styles.module.css';
 
 function Answer({ num1, num2, updatePoints }) {
   const [answer, setAnswer] = useState('');
@@ -24,8 +25,9 @@ function Answer({ num1, num2, updatePoints }) {
         }}
         type="text"
         placeholder="Введите ответ"
+        className={styles.answer}
       />
-      <input type="submit" value="Проверить" />
+      <input type="submit" value="Проверить" className={styles.submit} />
     </form>
   );
 }
